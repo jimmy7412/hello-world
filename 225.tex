@@ -1,0 +1,97 @@
+\documentclass[twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{225 Notes}
+\author{James}
+
+\graphicspath{{Images/}}
+
+\begin{document}
+
+\maketitle
+\tableofcontents{}
+\section{Chapter 1}
+
+$|\psi\rangle=|+\rangle + |-\rangle$ This is a Quantum State $\psi$ it needs the money signs to be in the math mode in order to use it. 
+
+\subsection{Stern-Gerlach Experiments}
+Stern-Gerlach Experiments are where a particle (or many particles) is passed through a magnetic field in a certain direction and then they are observed going in a specific direction. 
+
+After a particle goes through an SG it will align itself with that SG's direction. So if a particle is 100\% positive Z then it goes through an X SG, it will then be split in to 50/50 positive and negative Z. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=6cm]{SternWiki.png}
+\caption{An example of a stern Gerlach Experiment}
+\label{fig:lion}
+\end{figure}
+
+\subsection{Postulate One}
+The state of a quantum Mechanical system, including all the information you can know about it, is represented mathematically by a normalized Ket.
+
+\subsection{Quantum State Vectors}
+
+These act like vectors as a basis state for a Hilbert Space.\footnote{Hilbert Space is the space where quantum state vectors live and work.} They are normally in the Z basis or the $S_z$ basis. The general Quantum state vector $\psi$ is the equation that represents a basis state. The $|+\rangle$ and $|-\rangle$ represent orthogonal vectors. The Ket is how they are normally represented and pictured. 
+
+Ket:
+\begin{equation}\label{bra}
+    |\psi\rangle=a|+\rangle+b|-\rangle
+\end{equation}
+
+Conversely there is also a Bra that is like the opposite of a Ket in that it is the complex conjugate of the Ket. All that this means is that the imaginary numbers all go from positive to negative. 
+
+Bra:
+\begin{equation}\label{ket}
+    \langle\psi|=a^*\langle+|+b^*\langle-|
+\end{equation}
+
+Because the vectors $|+\rangle$ and $|-\rangle$ are orthonormal to each other when the inner product of a bra and a ket are taken only the respecting parts are multiplied. 
+
+\begin{equation} \label{eq1}
+\begin{split}
+\langle+|\psi\rangle & = \langle+|(a|+\rangle+b|-\rangle) \\
+ & = \langle+|a|+\rangle+\langle+|b|-\rangle\\
+ & = a\langle+|+\rangle+b\langle+|-\rangle\\
+ & = a
+\end{split}
+\end{equation}
+
+When they are flipped they become the complex conjugate of the inner product calculated $\langle+|\psi\rangle$ $\rightarrow$ $\langle\psi|+\rangle^*$. For two Quantum States $\langle\phi|\psi\rangle\rightarrow\langle\psi|\phi\rangle^*$ 
+
+\subsubsection{Example 1.1}
+
+Normalize the vector $|\psi\rangle=C(1|+\rangle+2i|-\rangle)$. The complex constant C is often reffered to as the \textbf{Normalization Constant}.
+
+To normalize $|\psi\rangle$, we set the inner product of the vector with itself equal to unity and then solve for C, note the requisite complex conjugation.
+
+\begin{equation} \label{eq2}
+\begin{split}
+1 & = \langle\psi|\psi\rangle \\
+ & = C^*(1|\langle+|-2i\langle-|)C(1|+\rangle+2i|-\rangle)\\
+ & = C^*C(1\langle+|+\rangle+2i\langle+|-\rangle-2i\langle-|+\rangle+4\langle-|-\rangle)\\
+ & = |C^2|(1\langle+|+\rangle+4\langle-|-\rangle)\\
+ & = 5|C^2|\\
+ \frac{1}{5} & = C^2\\
+ \sqrt{\frac{1}{5}} & = C
+\end{split}
+\end{equation}
+
+The overall phase of the normalization constant is not physically meaningful, so we follow the standard convention and choose it to be real and positive. This yields $C=\frac{1}{\sqrt{5}}$. The normalized quantum state is 
+
+\begin{equation}
+    |\psi\rangle=\frac{1}{\sqrt{5}}(1|+\rangle+2i|-\rangle)
+\end{equation}
+
+\subsection{Postulate 4 (Spin-one half System)}
+
+The probability of obtaining the value $\pm\hbar/2$ in a measurement of the observable $S_z$ on a system in the state $|\psi\rangle$ is
+
+\begin{equation}
+    \mathcal{P}_\pm=|\langle\pm|\psi\rangle|^2,
+\end{equation}
+
+where $|\pm\rangle$ is the basis ket of $S_z$ corresponding to the result $\pm\hbar/2$
+
+\end{document}
