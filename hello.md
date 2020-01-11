@@ -8,3 +8,5 @@ In 2005 a faint dwarf spheroidal galaxy was discovered in the Ursa Major constel
 
 # Adding
 _New Addition_
+
+~Bold Statement~
